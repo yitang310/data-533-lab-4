@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[68]:
-
-
 import unittest
 from product.company.value_profit import *
 class TestCompany2(unittest.TestCase):
@@ -14,8 +8,8 @@ class TestCompany2(unittest.TestCase):
         print("setUp")
         
     def teststr(self):
-        self.assertIsInstance(value_percentage(1000,10000),str)
-        self.assertIsInstance(sales_percentage(200,10000),str)
+        self.assertNotIsInstance(value_percentage(100000,10000),str)
+        self.assertNotIsInstance(sales_percentage(200000,10000),str)
         self.assertIsInstance(tendency(500,600),str)
         self.assertIs(type(float(value_percentage(1000,10000).strip("%"))),float)
         self.assertIsNot(type(float(sales_percentage(1000,10000).strip("%"))),int)
@@ -32,4 +26,3 @@ class TestCompany2(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print("tearDownClass")
-
