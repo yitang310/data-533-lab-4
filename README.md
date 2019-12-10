@@ -2,7 +2,7 @@
 
 Chenxi Yang, Yi Tang
 
-~Branch New has been deleted after merging. Please to check pull requests for further commits.~
+**Branch New has been deleted after merging. Please to check pull requests for further commits.**
 
 Passing build stamp
 
