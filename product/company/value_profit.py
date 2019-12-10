@@ -30,6 +30,9 @@ def sales_percentage(sales_brand,sales_company):
     except ValuesBrandCompanyError as ve2:
         print("Brand Sales {} should not larger than Company Sales {}.".format(ve2.value1,ve2.value2))
         
+    except TypeError:
+        print("TypeError")
+        
 
 def tendency(lastyear,thisyear):
     
