@@ -24,6 +24,8 @@ class TestPrice(unittest.TestCase): # test class
         self.assertEqual(pr.tax_price(1,'MB'), 1.13)
         self.assertEqual(pr.tax_price(1,'NL'), 1.15)
         self.assertEqual(pr.tax_price(1,'SK'), 1.11)
+        self.assertNotIsInstance(pr.tax_price(2,'BB'),int)
+        self.assertNotIsInstance(pr.tax_price('AB','AB'),int)
 
     def test_price2(self): # test case 
         self.assertNotEqual(pr.tax_price(1,'NS'), 1.17) 
