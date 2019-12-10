@@ -22,6 +22,8 @@ class TestProperty(unittest.TestCase): # test class
         self.assertIsNone(pr2.property('beeswax','2020-09-09','2019-09-09'))
         self.assertIsNone(pr2.property('olive oil','2020-07-07','2019-07-07'))
         self.assertIsNone(pr2.property('cocoa butter','2020-03-03','2019-03-03'))
+        self.assertNotIsInstance(pr2.property('ig','2019-03-03','2020-03-03'),str)
+        self.assertNotIsInstance(pr2.property(12,'2020-03-03','2019-03-03'),str)
 
     def test_property2(self): # test case 
         self.assertNotIsInstance(pr2.property('water','2020-08-08','2019-08-08'),str)

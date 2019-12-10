@@ -22,6 +22,10 @@ class TestPrice(unittest.TestCase): # test class
         self.assertEqual(pr.tax_price(1,'ON'), 1.13)
         self.assertEqual(pr.tax_price(1,'NB'), 1.15)
         self.assertEqual(pr.tax_price(1,'MB'), 1.13)
+        self.assertEqual(pr.tax_price(1,'NL'), 1.15)
+        self.assertEqual(pr.tax_price(1,'SK'), 1.11)
+        self.assertNotIsInstance(pr.tax_price(2,'BB'),int)
+        self.assertNotIsInstance(pr.tax_price('AB','AB'),int)
 
     def test_price2(self): # test case 
         self.assertNotEqual(pr.tax_price(1,'NS'), 1.17) 
@@ -29,6 +33,10 @@ class TestPrice(unittest.TestCase): # test class
         self.assertNotEqual(pr.tax_price(1,'NU'), 1.12)
         self.assertNotEqual(pr.tax_price(1,'PE'), 1.14)
         self.assertNotEqual(pr.tax_price(1,'QC'), 1.15)
+<<<<<<< HEAD
+=======
+        self.assertNotEqual(pr.tax_price(1,'YT'), 1.13)
+>>>>>>> new
         
     def tearDown(self):
         print("tearDown")
